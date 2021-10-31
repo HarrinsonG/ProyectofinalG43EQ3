@@ -1,0 +1,209 @@
+<html>
+    <head>
+        <title>Pagina de ventas Michael Kors</title>
+        <link href="{{ url_for('static', filename='css/misEstilos1.css') }}" rel="stylesheet" type="text/css"/>
+
+    </head>
+    
+    <body>
+        
+        <main>
+        <div id="caja_busqueda">
+            <form action="#" method="post">
+                <!--<input type="submit" name="Search" value="LOGIN" id="searchbutton" title="Search" />-->
+                 
+                <input type="text" value="Buscar producto..." name="q" size="15" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+               
+                <a href="pagina1"><input type="button" name="Search" value="LOGIN" id="searchbutton" title="Search" /></a>
+               
+                <a href="sesion"><img src="{{ url_for('static', filename='images/icono_inicio.jpg') }}" alt="inicio" width="20" height="20" /></a>
+                 
+                
+                
+            </form>
+        </div>
+
+        <h3 id="objeto_1">Productos especiales. 25% de descuento por tu primera compra</h3>
+        
+
+         
+            
+            <div class="menu" id="barraLateral">
+                <div class="empresa">
+                    <h3 id="objeto_2">MICHAEL KORS</h3>
+                    
+                </div>
+
+
+            
+           
+            
+            
+            </div>
+
+            <div class="contenido3" id="contenido3">
+                <div><br>
+                
+                
+            
+                <div class="registro-form2">
+                    <!--<h4 >Mi perfil</h4> -->
+                    
+                        <table>
+                          <tr>
+
+                            {% if '3' in valor %}
+                            
+                            {% set data = url_for('static', filename='images/3.jpg') %}
+                        {% endif %}
+
+                        {% if '1' in valor %}
+                            
+                            {% set data = url_for('static', filename='images/1.jpg') %}
+                        {% endif %}
+
+                        
+                        {% if '12' in valor %}
+                            
+                            {% set data = url_for('static', filename='images/12.jpg') %}
+                        {% endif %}
+
+                        {% if '6' in valor %}
+                            
+                            {% set data = url_for('static', filename='images/6.jpg') %}
+                        {% endif %}
+                            
+                        {% if '9' in valor %}
+                            
+                        {% set data = url_for('static', filename='images/9.jpg') %}
+                    {% endif %}
+
+                    {% if '15' in valor %}
+                            
+                        {% set data = url_for('static', filename='images/15.jpg') %}
+                    {% endif %}
+
+                    {% if '18' in valor %}
+                            
+                        {% set data = url_for('static', filename='images/18.jpg') %}
+                    {% endif %}
+
+                    {% if '21' in valor %}
+                            
+                        {% set data = url_for('static', filename='images/21.jpg') %}
+                    {% endif %}
+                    
+                    {% if '30' in valor %}
+                            
+                    {% set data = url_for('static', filename='images/30.jpg') %}
+                {% endif %}
+                    
+                        
+
+                            <td align="left"><img src="{{data}}"  style="float:right; margin:50px;" alt="inicio" width="200" height="250" align="left" /></a>
+                                <td align="left"><h3>Michael Kors</h3><br>{{registronombre}}<br><br>Color:<br>
+                                    <input type="radio" id="html" name="fav_language" value="HTML">
+                                    <label for="html">{{registrocolor}}</label><br><br>Cantidad:
+                                    
+                                    <select name="cantidad">
+                                        <option value="1">1</option> 
+                                        <option value="2">2</option> 
+                                        <option value="3">3</option>
+                                        <option value="4">4</option> 
+                                        <option value="5">5</option> 
+                                    </select>
+
+                                    <a href="#"><input type="button" value="Agregar a mi lista de deseos" class="login-button3" /></a><br><br>
+                                    
+                                    <fieldset>
+                                        <legend align="left">Descripcion</legend>
+                                    <p><textarea name="descripcion" rows="5" cols="75" disabled="disabled">{{registrodescripcion}}</textarea></p>
+                                    </fieldset>
+                                </td>
+                                
+                              
+                            </td>
+                            
+                            
+                          </tr>
+                       
+                           
+                               
+                         
+                          <tr>
+                              <td>
+                                <fieldset>
+                                    <legend align="left">Comentarios</legend>
+                                <p><textarea name="comentario" rows="5" cols="50"></textarea></p>
+                                </fieldset>
+                              </td>
+
+                              <td>
+                                Califica este producto en una escala del 1 al 5
+                                donde 1 es la calificación mas baja y 5 la mas alta
+                                <form align="center">
+                                    <p class="clasificacion">
+                                      <input id="radio21" type="radio" name="estrellas" value="5"><!--
+                                      --><label for="radio21" >1★</label><!--
+                                      --><input id="radio22" type="radio" name="estrellas" value="4"><!--
+                                      --><label for="radio22">2★</label><!--
+                                      --><input id="radio23" type="radio" name="estrellas" value="3"><!--
+                                      --><label for="radio23">3★</label><!--
+                                      --><input id="radio24" type="radio" name="estrellas" value="2"><!--
+                                      --><label for="radio24">4★</label><!--
+                                      --><input id="radio25" type="radio" name="estrellas" value="1"><!--
+                                      --><label for="radio25">5★</label>
+                                    </p>
+                                  </form>
+
+                              </td>
+                          </tr>
+                          
+                          
+                        </table>
+                        <br><br>
+                        <p align="left">
+                            &nbsp&nbsp
+                            &nbsp&nbsp
+                            &nbsp&nbsp
+                            &nbsp&nbsp
+                            &nbsp&nbsp
+                            &nbsp&nbsp
+
+                        <input type="button" value="Agregar" class="login-button1" align="left"/>
+                        &nbsp&nbsp
+                        &nbsp&nbsp
+                        &nbsp&nbsp
+                       
+                        <input type="button" value="Modificar" class="login-button2" />
+                        &nbsp&nbsp
+                        &nbsp&nbsp
+                        &nbsp&nbsp
+                        
+                        <input type="button" value="Eliminar" class="login-button3" />
+                        </p>
+
+                </div>
+                
+
+                
+        
+                   
+                
+            </div>
+            </div>
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
+    </body>
+
+
+</html>

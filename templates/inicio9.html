@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>Pagina de ventas Michael Kors</title>
+        <link href="{{ url_for('static', filename='css/misEstilos1.css') }}" rel="stylesheet" type="text/css"/>
+
+    </head>
+    
+    <body>
+        
+        <main>
+        <div id="caja_busqueda">
+            <form action="#" method="post">
+                <input type="text" value="Buscar producto..." name="q" size="15" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                               
+                <a href="pagina1"><input type="button" name="Search" value="LOGIN" id="searchbutton" title="Search" /></a>
+                 
+                 <a href="pagina2"><img src="{{ url_for('static', filename='images/añadir4.png') }}" alt="inicio" width="20" height="20" /></a>
+
+            </form>
+        </div>
+
+        <h3 id="objeto_1">Productos especiales. 25% de descuento por tu primera compra</h3>
+        
+
+         
+            
+            <div class="menu" id="barraLateral">
+                <div class="empresa">
+                    <h3 id="objeto_2">MICHAEL KORS</h3>
+                    
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><br><br><a href="#">Ropa</a><ul><br><br>
+                            <li><a href="inicio1">Vestidos</a></li>
+                            <li><a href="inicio2">Pantalones</a></li>
+                            <li><a href="inicio3">Ropa deportiva</a></li>
+                        </ul></li>
+                        <li><a href="#">Calzado</a><ul>
+                            <li><a href="inicio4">Zapatillas</a></li>
+                            <li><a href="inicio5">Botines</a></li>
+                            <li><a href="inicio6">Botas</a></li>
+                            
+                        </ul></li>
+
+                        <li><a href="#">Bolsos</a><ul>
+                            <li><a href="inicio7">Bolso de mano</a></li>
+                            <li><a href="inicio8">Mochilas y riñoneras</a></li>
+                            <li><a href="inicio9">Carteras</a></li>
+                        </ul></li>
+
+
+                        <li><a href="#">Accesorios</a><ul>
+                            <li><a href="inicio10">Gafas de sol</a></li>
+                            <li><a href="inicio11">Ropa interior</a></li>
+                            <li><a href="inicio12">sombreros,guantes y bufandas</a></li>
+                          
+                        </ul></li>
+
+                        <li><a href="ofertas">Ofertas</a><ul></ul>
+                        </ul></li> 
+                        
+                    </ul>
+                
+                
+                    
+            </nav>
+
+            
+           
+            
+            
+            </div>
+
+            <div class="contenido" id=contenido>
+                <div><br>
+                <h1>CARTERAS</h1> 
+                
+                <div class="BOX" id="BOX">
+                    <div class="imgbox" id="imgbox" style="left: -600px;">
+                    <img src="" alt="">
+                    <a href="#"><img src="{{ url_for('static', filename='images/27.jpg') }}" alt=""></a>
+                    <img src="{{ url_for('static', filename='images/28.jpg') }}" alt="">
+                    <img src="{{ url_for('static', filename='images/29.jpg') }}" alt="">
+                   
+                    
+                    </div>
+                    <div class="button" id="button">
+                        <span ind="1" class="on"></span>
+                        <span ind="2" ></span>
+                        <span ind="3" ></span>
+                        <span ind="4" ></span>
+                        
+                        
+                    </div>
+                    <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+                    <a href="javascript:;" id="next" class="arrow">&gt;</a>
+                </div>
+                <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+                
+            </div>
+            </div>
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
+    </body>
+
+
+</html>

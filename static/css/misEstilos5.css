@@ -1,0 +1,200 @@
+*{
+    box-sizing:content-box;
+    margin:0;
+    padding:0;
+    }
+
+   #caja_busqueda{
+        
+        
+    text-align: right;
+        background-color: #000;
+        
+    }
+
+
+
+
+
+    
+
+
+    #objeto_1{
+        color: white;
+        background: rgb(156, 104, 104);
+        text-align: center;
+    }
+
+    #objeto_2{
+        color: white;
+        background: rgb(5, 5, 5);
+        text-align: center;
+    }
+
+
+   
+    
+    
+/*PAGINA INICIAR SESION*/
+
+#contenido2{
+    color: rgb(8, 8, 8);
+    background: rgb(253, 253, 253);
+    text-align: center;
+    margin-left:350px;
+    margin-right: 350px;
+        
+}
+
+
+  /*pagina Registro*/
+
+  /*lista de deseos*/
+  /*para que aparescan con color las listas
+  ul li {
+    padding:1px;
+    cursor:pointer;
+  }
+  .pulsar_lista{
+    background: rgb(68, 160, 185);
+    
+  }*/
+
+  /*Pagina de compra*/
+  
+  /*Super Administrador*/
+
+  #header {
+    float:left;
+    width:100%;
+    background:#DAE0D2 url("imagenes/bg.gif") repeat-x bottom;
+    font-size:93%;
+    line-height:normal;
+
+    
+    
+}
+
+#header ul {
+    margin:0;
+    padding:10px 10px 0;
+    list-style:none;
+}
+
+
+#header a {
+    display:block;
+}
+
+#header li {
+    float:left;
+    background:url("imagenes/norm_right.gif")
+      no-repeat right top;
+    margin:0;
+    padding:0;
+}
+
+#header a {
+    display:block;
+    background:url("imagenes/norm_left.gif") no-repeat left top; 
+    padding:5px 15px 4px;
+}
+
+#header #current { background-image:url("norm_right_on.gif"); } 
+#header #current a { background-image:url("norm_left_on.gif"); padding-bottom:5px;}
+
+#margenes{
+    
+        border:0;
+        margin: 100px;
+      
+}
+
+
+/*Gestion de comentarios*/
+
+
+.container {
+  width: 400px;
+  /* background-color: #f1f1f1; */
+    /* margin: auto; */	
+    
+
+}
+
+section p {
+  overflow: hidden;
+  max-height: 0;
+  text-align: justify;
+  font-family: "Courier New", Courier, monospace;
+  background: #e4e4e4;
+  transition: all 0.2s ease-in;
+}
+
+section a {
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #646464;
+  border-bottom: 2px solid gray;
+  color: white;
+}
+
+section:target p {
+  max-height: 120px;
+  padding: 10px;
+}
+
+/*Ver usuarios*/
+
+#usuarios{
+
+    margin-left: 100px;
+    margin-right: 30px;
+    align-content: center;
+    margin-top: 30px;
+    
+}
+
+
+/*Calificaciones*/
+
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+  
+}
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}

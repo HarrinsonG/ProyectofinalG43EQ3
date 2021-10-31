@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <title>Pagina de ventas Michael Kors</title>
+        <link href="{{ url_for('static', filename='css/misEstilos4.css') }}" rel="stylesheet" type="text/css"/>
+
+        
+    </head>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <body>
+        
+        <main>
+        <div id="caja_busqueda">
+            <form action="#" method="post">
+                <!--<input type="submit" name="Search" value="LOGIN" id="searchbutton" title="Search" />-->
+                <input type="text" value="Buscar producto..." name="q" size="15" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                               
+                <a href="#"><input type="button" name="Search" value="Mi cuenta" id="searchbutton" title="Search" /></a>
+                 
+                 <a href="pagina2"><img src="{{ url_for('static', filename='images/añadir4.png') }}" alt="inicio" width="20" height="20" /></a>
+                 <a href="sesion"><input type="button" name="Search" value="Salir" id="searchbutton" title="Search" /></a>
+                
+            </form>
+        </div>
+
+        <h3 id="objeto_1">MODO SUPERADMINISTRADOR</h3>
+        <h1 id="objeto_1">Michael Kors</h1>
+
+         
+            
+           
+
+
+            
+           
+            
+            
+            </div>
+
+            <style type="text/css">
+                
+                #header {
+                  float:left;
+                  width:100%;
+                  background:#DAE0D2 url("{{ url_for('static', filename='images/bg.gif') }}") repeat-x bottom;
+                  font-size:93%;
+                  line-height:normal;
+              
+                  
+                  
+              }
+              
+              #header ul {
+                  margin:0;
+                  padding:10px 10px 0;
+                  list-style:none;
+              }
+              
+              
+              #header a {
+                  display:block;
+              }
+              
+              #header li {
+                  float:left;
+                  background:url("{{ url_for('static', filename='images/norm_right.gif') }}")
+                    no-repeat right top;
+                  margin:0;
+                  padding:0;
+              }
+              
+              #header a {
+                  display:block;
+                  background:url("{{ url_for('static', filename='images/norm_left.gif') }}") no-repeat left top; 
+                  padding:5px 15px 4px;
+              }
+              
+              #header #current { background-image:url("{{ url_for('static', filename='/norm_right_on.gif') }}"); } 
+              #header #current a { background-image:url("{{ url_for('static', filename='/norm_left_on.gif') }}"); padding-bottom:5px;}
+              
+              #margenes{
+                  
+                      border:0;
+                      margin: 100px;
+                    
+              }
+              
+              
+              
+              </style>
+              
+
+            <div id="header">
+                <ul>
+                  <li ><a href="superUsuarios">Usuarios</a></li>
+                  <li id="current"><a href="superProductos">Productos</a></li>
+                  <li ><a href="calificaciones">Calificaciones</a></li>
+                  <!--<li ><a href="superAdministrador_categorias1.html">Categorias</a></li>-->
+               
+                </ul>
+
+                 </div>
+                 <div class="margines" id="margenes" align="center">
+                 
+                    <table align="left">
+                        <tr>
+                            <td align="left"><!--<a href="#" onclick="window.open('agregar_producto_bota1.html', 'popup', 'top=100, left=100, width=800, height=680, toolbar=NO, resizable=NO,scrollbars=no, locationbar=no, Location=NO, Menubar=NO, Titlebar=No, status=yes, Status=NO')"><img src="{{ url_for('static', filename='images/añadirproducto.jpg') }}" style="float:left; margin:25px;" alt="inicio" width="50" height="50"></a>-->
+                                
+                                
+                                <br><br>
+                                <input type="text" value="Buscar" name="q" size="15" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                                <br><input type="button" value="Buscar" class="login-button3" align="left"/>
+                            </td>
+                           <!-- <td>
+                                <select name="Seleccionar">
+                                    <option value="seleccionar">Seleccionar</option>
+                                    <option value="eliminar">Eliminar</option> 
+                                    <option value="exportar">Exportar</option> 
+                                   
+                                </select>
+                                <input type="button" value="Ejecutar" class="login-button3" align="left"/>
+                        
+                            </td>
+                            -->
+                        </tr>
+
+                    </table>
+                    
+
+                    <form id="form-id" method="post" action="{{ url_for('opcionesCM')}}">
+                <table class="default" with="1000">
+
+                    <tr>
+                     
+                    
+                        
+                    <td>
+                        
+                        <h1>Listado de productos</h1><br>
+                        <table border="1">
+                            <tr>
+                                <td>Accion_1<div align="center"><input type="radio" id="radioselect" name="radioselect2" value="1" checked></div></td>
+                                <td>Accion_2<div align="center"><input type="radio" id="radioselect" name="radioselect2" value="2"></div></td>
+                                
+                                <td>Seleccion</td>
+                                <td>Nombre:</td>
+                                <td>Categoria:</td>
+                                <td>Genero</td>
+                                <td>Cantidad</td>
+                                <td>Descripcion</td>
+                                
+                            </tr>
+                            {% for n in conceptos2 %}
+                            <tr>
+                                <td><a href="#" onclick="document.forms['form-id'].submit();"  name="action" value="action">Consultar</a></td>
+                                <td><a href="#" onclick="document.forms['form-id'].submit();"  name="action" value="action">Editar</a></td>
+                                <td><div align="center"><input type="radio" id="radio_horizontal" name="radio_horizontal2" value="{{loop.index}}" checked>"{{loop.index}}"</div></td>
+                                
+                                {% for m in n %}
+                                
+                                <td>{{m}}</td>
+                                {% endfor %}
+                               
+                            </tr>
+                            {% endfor %}
+                            
+                           
+                           
+                            
+                            
+
+                        </table>
+                    </form>
+                    </td>
+                  
+                             
+                                 
+                                
+                            
+                             
+                       
+
+                       
+                    
+                  
+                  
+                    </tr>
+                  
+                    
+                  
+                  </table>
+                  
+                             
+            </div>
+            </div>
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
+    </body>
+   
+
+</html>

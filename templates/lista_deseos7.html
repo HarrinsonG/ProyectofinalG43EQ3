@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Pagina de ventas Michael Kors</title>
+        <link href="{{ url_for('static', filename='css/misEstilos1.css') }}" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <body>
+        
+        <main>
+        <div id="caja_busqueda">
+            <form action="#" method="post">
+                <input type="text" value="Buscar producto..." name="q" size="15" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                               
+                <a href="#"><input type="button" name="Search" value="Mi cuenta" id="searchbutton" title="Search" /></a>
+                 
+                 <a href="pagina2"><img src="{{ url_for('static', filename='images/añadir4.png') }}" alt="inicio" width="20" height="20" /></a>
+
+            </form>
+        </div>
+
+        <h3 id="objeto_1">Productos especiales. 25% de descuento por tu primera compra</h3>
+        
+
+         
+            
+            <div class="menu" id="barraLateral">
+                <div class="empresa">
+                    <h3 id="objeto_2">MICHAEL KORS</h3>
+                    
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><br><br><a href="mi_perfil">Mi perfil</a>
+                          
+                        <li><a href="deseos1">Mi lista de deseos</a></li>
+                        <li><a href="cambiar">Cambiar contraseña</a></li>
+                           
+                       
+                        <li><a href="ruta">Direcciones</a></li>
+                           
+                        
+                        <li><a href="sesion">Cerrar</a></li>
+                             
+                        
+                        
+                    </ul>
+                
+                
+                    
+            </nav>
+
+            
+           
+            
+            
+            </div>
+
+            <div class="contenido2" id=contenido2>
+                <div><br>
+                <h1>Mi cuenta</h1> 
+                
+                
+                <div class="registro-form">
+                    
+                   <h4 >Modificar nombre lista</h4> <br>
+                    
+                   <form class="formulario" method="post" action="{{ url_for('pagina522')}}">
+                    <table>
+                      <tr>
+                        <td align="left">Nombre:</td>
+                        <td align="left"><input type="text" name="nombre" value="{{item2}}" id="nombre" /></td>
+                      </tr>
+                    </table>
+                    <br>
+                    <input type="submit" value="Guardar" class="login-button" onclick="crear50()"/>
+                  </form>
+                 
+               
+
+                </div>
+           
+               
+            </div>
+        
+            </div>
+        
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
+   
+    </body>
+
+
+</html>

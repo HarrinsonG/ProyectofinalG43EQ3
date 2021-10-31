@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Pagina de ventas Michael Kors</title>
+        <link href="{{ url_for('static', filename='css/misEstilos4.css') }}" rel="stylesheet" type="text/css"/>
+       
+    </head>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <body>
+        
+        <main>
+        
+
+        <h3 id="objeto_1">MODO SUPERADMINISTRADOR</h3>
+        <h1 id="objeto_1">Editar {{nombre}} {{username}}</h1>
+
+        
+        
+               
+            <div id="usuarios" class="usuarios">
+                <table>
+                    <form class="formulario" method="post" action="{{ url_for('modSuper')}}">
+                    <tr>
+                        <td align="left">Nombre:</td>
+                        <td align="left"><input type="text" name="nombre" value="{{nombre}}" onkeypress='return soloLetras(event)' id="nombre"/></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Apellido:</td>
+                        <td align="left"><input type="text" name="apellido" value="{{apellido}}" onkeypress='return soloLetras(event)' id="apellido"/></td>
+                    </tr>
+                    <tr>
+                        <td align="left">identificacion:</td>
+                        <td align="left"><input type="text" name="identificacion" value="{{cedula}}" onkeypress='return soloNumeros(event)' id="identificacion" disabled="disabled"/></td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">Usuario:</td>
+                        <td align="left"><input type="text" name="usuario" value="{{username}}" id="usuario" disabled="disabled"/></td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">Email</td>
+                        <td align="left"><input type="text" name="email" value="{{email}}" id="correo" disabled="disabled" /></td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">Estado</td>
+                        <td align="left">
+                                    
+                            <select name="estado" id="estado" >
+                                                           
+                                <option value="{{registroEstado}}">{{registroEstado}}</option> 
+                                <option value="Activo">Activo</option> 
+                                <option value="Inactivo">Inactivo</option> 
+                                
+                                
+                            </select>
+                    </tr>
+
+                    <tr>
+                        <td align="left">Genero</td>
+                        <td align="left">
+                                    
+                            <select name="genero" id="genero">
+                               
+                                <option value="{{registroGenero}}">{{registroGenero}}</option> 
+                                <option value="Masculino">Masculino</option> 
+                                <option value="Femenino">Femenino</option> 
+                                
+                                
+                            </select>
+                    </tr>
+
+                    <tr>
+                        <td align="left">Tipo usuario</td>
+                        <td align="left">
+                                    
+                            <select name="tipo_usuario" id="tipo_usuario">
+                                <option value="{{registroRol}}">{{registroRol}}</option> 
+                                <option value="Administrador">Administrador</option> 
+                                <option value="Superadministrador">Superadministrador</option> 
+                               
+                                
+                                
+                            </select>
+                    </tr>
+                   
+                    
+
+                </table>
+            
+                <br><br>
+               
+                <input type="submit" value="Guardar" class="guardar" align="left"  onclick="alerta3()"/>
+                </form>
+
+                <a href="cancelarSadministrador">   <input type="submit" value="Cancelar" class="cancelar" align="left" /></a>
+
+            </div>
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
+    </body>
+
+
+</html>

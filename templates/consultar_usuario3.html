@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Pagina de ventas Michael Kors</title>
+        <link href="{{ url_for('static', filename='css/misEstilos4.css') }}" rel="stylesheet" type="text/css"/>
+       
+    </head>
+    
+    <body>
+        
+        <main>
+        
+
+        <h3 id="objeto_1">MODO SUPERADMINISTRADOR</h3>
+        <h1 id="objeto_1">Ver usuarios</h1>
+
+            
+            
+            <div id="usuarios" class="usuarios">
+                <table>
+                    <tr>
+                        <td align="left">Nombre:</td>
+                        <td align="left"><input type="text" name="nombre" value="{{nombre}}" disabled="disabled"/></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Apellido:</td>
+                        <td align="left"><input type="text" name="apellido" value="{{apellido}}" disabled="disabled" /></td>
+                    </tr>
+                    <tr>
+                        <td align="left">identificacion:</td>
+                        <td align="left"><input type="text" name="identificacion" value="{{cedula}}" disabled="disabled" /></td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">Usuario:</td>
+                        <td align="left"><input type="text" name="usuario" value="{{username}}" disabled="disabled"/></td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">Email</td>
+                        <td align="left"><input type="text" name="Email" value="{{email}}" disabled="disabled" /></td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">Estado</td>
+                        <td align="left">
+                                    
+                            <select name="Estado" disabled="disabled">
+                                                                
+                                <option value="{{registroEstado}}">{{registroEstado}}</option> 
+                                <option value="Activo">Activo</option> 
+                                <option value="Inactivo">Inactivo</option> 
+                                
+                                
+                            </select>
+                    </tr>
+
+                    <tr>
+                        <td align="left">Genero</td>
+                        <td align="left">
+                                    
+                            <select name="Genero" disabled="disabled">
+                                
+                                <option value="{{registroGenero}}">{{registroGenero}}</option> 
+                                <option value="Masculino">Masculino</option> 
+                                <option value="Femenino">Femenino</option> 
+                                
+                                
+                            </select>
+                    </tr>
+
+                    <tr>
+                        <td align="left">Tipo usuario</td>
+                        <td align="left">
+                                    
+                            <select name="tipo_usuario" disabled="disabled">
+                                
+                                <option value="{{registroRol}}">{{registroRol}}</option> 
+                                <option value="Administrador">Adminstrador</option> 
+                                <option value="Superadministrador">Superadministrador</option> 
+                                <option value="Usuario Final">Usuario Final</option> 
+                                
+                                
+                            </select>
+                    </tr>
+                    
+                    
+
+                </table>
+            
+                <br><br>
+               
+               
+             <a href="cancelarSadministrador">   <input type="submit" value="Cancelar" class="cancelar" align="left" /></a>
+
+            </div>
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
+    </body>
+
+
+</html>

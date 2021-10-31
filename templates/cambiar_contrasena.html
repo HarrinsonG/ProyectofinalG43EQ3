@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Pagina de ventas Michael Kors</title>
+        <link href="{{ url_for('static', filename='css/misEstilos1.css') }}" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <body>
+        
+        <main>
+        <div id="caja_busqueda">
+            <form action="#" method="post">
+                <!--<input type="submit" name="Search" value="LOGIN" id="searchbutton" title="Search" />-->
+                <input type="text" value="Buscar producto..." name="q" size="15" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                             
+                <a href="sesion"><img src="{{ url_for('static', filename='images/icono_inicio.jpg') }}" alt="inicio" width="20" height="20" /></a>
+
+                
+                <a href="pagina2"><img src="{{ url_for('static', filename='images/añadir4.png') }}" alt="inicio" width="20" height="20" /></a>
+
+            </form>
+        </div>
+
+        <h3 id="objeto_1">Productos especiales. 25% de descuento por tu primera compra</h3>
+        
+
+         
+            
+          
+
+                
+            <div class="menu" id="barraLateral">
+                <div class="empresa">
+                    <h3 id="objeto_2">MICHAEL KORS</h3>
+                    
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><br><br><a href="mi_perfil">Mi perfil</a>
+                          
+                        <li><a href="deseos1">Mi lista de deseos</a></li>
+                        <li><a href="cambiar">Cambiar contraseña</a></li>
+                           
+                       
+                        <li><a href="ruta">Direcciones</a></li>
+                           
+                        
+                        <li><a href="sesion">Cerrar</a></li>
+                             
+                        
+                        
+                    </ul>
+                
+                
+                    
+            </nav>
+
+            
+           
+            
+            
+            </div>
+
+            
+           
+            
+            
+            </div>
+
+            <div class="contenido2" id="contenido2">
+                <div><br>
+                <h1>USUARIO REGISTRADO</h1><br><br> 
+
+                <form method="post" action="{{ url_for('cambiar')}}">
+                <div class="login-form">
+                    <h3>Contraseña actual:</h3>
+                    <input type="password" placeholder="Contraseña" id="actual_pas" name="actual_pas"/>
+                    <h3>Nueva contraseña:</h3>
+                    <input type="password" placeholder="Contraseña" id="nueva_pas" name="nueva_pas"/>
+                    <h3>Digite nuevamente la contraseña:</h3>
+                    <input type="password" placeholder="Contraseña" id="confirmar_pas" name="confirmar_pas"/>
+                    <br><br>
+                    <input type="submit" value="Guardar" class="login-button" onclick="cambioPasswd()"/>
+                   <!-- <input type="button" value="Cerrar" class="login-button" />-->
+
+                    <br><br>
+                    <a href="sesion">Inicio</a>
+
+                </div>
+            </form>
+                
+            </div>
+            </div>
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
+    </body>
+
+
+</html>

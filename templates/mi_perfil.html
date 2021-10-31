@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>Pagina de ventas Michael Kors</title>
+        <link href="{{ url_for('static', filename='css/misEstilos1.css') }}" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <body>
+        
+        <main>
+        <div id="caja_busqueda">
+            <form action="#" method="post">
+                <input type="text" value="Buscar producto..." name="q" size="15" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                               
+                <a href="#"><input type="button" name="Search" value="Mi cuenta" id="searchbutton" title="Search" /></a>
+                 
+                 <a href="pagina2"><img src="{{ url_for('static', filename='images/añadir4.png') }}" alt="inicio" width="20" height="20" /></a>
+
+            </form>
+        </div>
+
+        <h3 id="objeto_1">Productos especiales. 25% de descuento por tu primera compra</h3>
+        
+
+         
+            
+            <div class="menu" id="barraLateral">
+                <div class="empresa">
+                    <h3 id="objeto_2">MICHAEL KORS</h3>
+                    
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><br><br><a href="mi_perfil">Mi perfil</a>
+                          
+                        <li><a href="deseos1">Mi lista de deseos</a></li>
+                           
+                        <li><a href="cambiar">Cambiar contraseña</a></li>
+                        <li><a href="ruta">Direcciones</a></li>
+                           
+                        
+                        <li><a href="sesion">Cerrar</a></li>
+                             
+                        
+                        
+                    </ul>
+                
+                
+                    
+            </nav>
+
+            
+           
+            
+            
+            </div>
+
+            <div class="contenido2" id=contenido2>
+                <div><br>
+                <h1>Mi cuenta</h1> 
+                
+                    
+                <div class="registro-form">
+                    <h4 >Mi perfil</h4><br>  
+                    <form class="formulario" method="post" action="{{ url_for('modUser')}}">
+                        <table>
+                          <tr>
+                            <td align="left">Nombre:</td>
+                            <td align="left"><input type="text" name="nombre2" value="{{usuar}}" onkeypress='return soloLetras(event)' id="nombre2"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Apellidos:</td>
+                            <td align="left"><input type="text" name="apellido" value="{{apellido}}" onkeypress='return soloLetras(event)' id="apellido"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left" >Cedula:</td>
+                            <td align="left"><input type="text" name="cedula2" value="{{cedula}}" onkeypress='return soloNumeros(event)' id="cedula2" disabled="disabled"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Genero:</td>
+                            <td align="left">
+                                    
+                            <select name="genero" id="genero">
+                                
+                                <option value="{{registroGen}}">{{registroGen}}</option> 
+                                <option value="Masculino">Masculino</option> 
+                                <option value="Femenino">Femenino</option> 
+                                
+                                
+                            </select>
+                          </tr>
+                          <tr>
+                            <td align="left">Direccion:</td>
+                            <td align="left"><input type="text" name="direccion" value="{{direccion}}" id="direccion"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Correo:</td>
+                            <td align="left"><input type="text" name="correo" value="{{correo}}" id="correo"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Usuario:</td>
+                            <td align="left"><input type="text" name="usuario" value="{{username}}" id="usuario"/></td>
+                          </tr>
+                          <tr>
+                            <td>Tipo usuario:</td>
+                            <td align="left"><input type="text" name="nombre" value="Cliente" id="nombre2" disabled="disabled"/></td>
+                         
+                          </tr>
+                          
+                        </table>
+                        <br><br>
+                        <input type="submit" value="Modificar datos" class="login-button" onclick="modificarPerfil()"/>
+                      </form>
+
+                </div>
+                <!--<p>My string: {{my_string}}</p>-->
+                <!--<p>Value from the list: {{usuar[0]}}</p>-->
+                <!--<p>Loop through the list:</p>-->
+                
+                
+                
+            </div>
+            </div>
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
+    </body>
+
+
+</html>

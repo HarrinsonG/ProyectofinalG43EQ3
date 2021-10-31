@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Pagina de ventas Michael Kors</title>
+        <link href="{{ url_for('static', filename='css/misEstilos1.css') }}" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <body>
+        
+        <main>
+        <div id="caja_busqueda">
+            <form action="#" method="post">
+                <!--<input type="submit" name="Search" value="LOGIN" id="searchbutton" title="Search" />-->
+                <input type="text" value="Buscar producto..." name="q" size="15" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                             
+                <a href="sesion"><img src="{{ url_for('static', filename='images/icono_inicio.jpg') }}" alt="inicio" width="20" height="20" /></a>
+
+                
+                <a href="pagina2"><img src="{{ url_for('static', filename='images/añadir4.png') }}" alt="inicio" width="20" height="20" /></a>
+
+            </form>
+        </div>
+
+        <h3 id="objeto_1">Productos especiales. 25% de descuento por tu primera compra</h3>
+        
+
+         
+            
+            <div class="menu" id="barraLateral">
+                <div class="empresa">
+                    <h3 id="objeto_2">MICHAEL KORS</h3>
+                    
+                </div>
+
+
+            
+           
+            
+            
+            </div>
+
+            <div class="contenido2" id="contenido2">
+                <div><br>
+                <h1>USUARIO REGISTRADO</h1><br><br> 
+                
+                <form name="loginForm" method="post" action="{{ url_for('login') }}" onsubmit="inicio_sesion()">
+                <div class="login-form" >
+                    <label ><h3>Usuario:</h3></label>
+                    <!--<input type="text" placeholder="Usuario" id="usuario2"/><br><br>-->
+                    <input  name="username" id="username"/><br><br>
+                    <label ><h3>Contraseña:</h3></label>
+                    <input type="password" name="password" id="password"/>
+                    <br><br>
+                    <!--<a><input type="button" value="Ingresar" class="login-button" onclick="inicio_sesion()"/></a>-->
+                    <a ><input type="submit" value="Ingresar"  onclick="inicio_sesion()"/></a>
+                     <br><br>
+                    <a href="sesion">Inicio</a>
+
+                </div>
+            </form>
+            
+            </div>
+            </div>
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
+    </body>
+
+
+</html>

@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>Pagina de ventas Michael Kors</title>
+        <link href="{{ url_for('static', filename='css/misEstilos1.css') }}" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <body>
+        
+        <main>
+        <div id="caja_busqueda">
+            <form action="#" method="post">
+                <!--<input type="submit" name="Search" value="LOGIN" id="searchbutton" title="Search" />-->
+                 
+                <input type="text" value="Buscar producto..." name="q" size="15" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+               
+                <a href="pagina1"><input type="button" name="Search" value="LOGIN" id="searchbutton" title="Search" /></a>
+               
+                <a href="sesion"><img src="{{ url_for('static', filename='images/icono_inicio.jpg') }}" alt="inicio" width="20" height="20" /></a>
+                 
+                
+                
+            </form>
+        </div>
+
+        <h3 id="objeto_1">Productos especiales. 25% de descuento por tu primera compra</h3>
+        
+
+         
+            
+            <div class="menu" id="barraLateral">
+                <div class="empresa">
+                    <h3 id="objeto_2">MICHAEL KORS</h3>
+                    
+                </div>
+
+
+            
+           
+            
+            
+            </div>
+
+            <div class="contenido2" id="contenido2">
+                <div><br>
+                <h1>NUEVO USUARIO</h1><br><br> 
+                {% with messages=get_flashed_messages() %}
+                  {% if messages %}
+                    <ul>
+                      {% for message in messages %}
+                        <li>{{message}}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+                
+               
+                
+                <div class="registro-form">
+                    
+                    <form class="formulario" method="post" action="{{ url_for('register')}}" >
+                        <table>
+                          <tr>
+                            <td>Tipo usuario</td>
+                            <td align="left"><input type="text" name="cliente" value="Cliente" id="cliente" disabled="disabled"/></td>
+                         
+                          </tr>
+                          <tr>
+                            <td align="left">Nombre:</td>
+                            <td align="left"><input type="text" name="nombre2" onkeypress='return soloLetras(event)' id="nombre2"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Apellidos:</td>
+                            <td align="left"><input type="text" name="apellido2" onkeypress='return soloLetras(event)' id="apellido2"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Genero</td>
+                            <td align="left">
+                                    
+                            <select name="genero" id="genero">
+                                <option value="selcategoria">Selecciona genero</option> 
+                                <option value="Masculino">M</option> 
+                                <option value="Femenino">F</option> 
+                                
+                                
+                            </select>
+                          </tr>
+                          
+                          <tr>
+                            <td align="left">Cedula:</td>
+                            <td align="left"><input type="text" name="cedula2" onkeypress='return soloNumeros(event)' id="cedula2"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Direccion:</td>
+                            <td align="left"><input type="text" name="direccion2" id="direccion2"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Correo:</td>
+                            <td align="left"><input type="text" name="correo2" id="correo2"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Usuario:</td>
+                            <td align="left"><input type="text" name="usuario2" id="usuario2"/></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Contraseña:</td>
+                            <td align="left"><input type="password" placeholder="Contraseña" name="passwd" id="passwd" /></td>
+                          </tr>
+                          <tr>
+                            <td align="left">Confirmar contraseña:</td>
+                            <td align="left"><input type="password" placeholder="Confirma Contraseña" name="passwd2" id="passwd2"/></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div align="center"><br><input type="radio" id="terminos" name="terminos" value="1">
+                                <label for="html">Acepto las <a href="javascript:void(0);" onclick="window.open('politicas', 'popup', 'top=100, left=100, width=599, height=300, toolbar=NO, resizable=NO,scrollbars=no, locationbar=no, Location=NO, Menubar=NO, Titlebar=No, status=yes, Status=NO')" rel="nofollow">politicas de privacidad</a></label><br>
+
+                              </div>
+                              
+                            </td>
+                          </tr>
+
+                        </table>
+                        <br><br>
+                        <a><input type="submit" value="Guardar datos" class="login-button" onclick="validarPasswd()" /></a>
+                      </form>
+                      <!--onclick="validarPasswd()"-->
+                </div>
+                
+                
+                              
+            </div>
+            </div>
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
+    </body>
+
+
+</html>
